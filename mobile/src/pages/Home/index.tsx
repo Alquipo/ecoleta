@@ -100,6 +100,7 @@ const Home = () => {
                 setSelectedCity('0');
               }}
               items={ufs}
+
             />
           )}
 
