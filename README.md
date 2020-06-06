@@ -50,18 +50,20 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
   - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um **.0** no final de todos os telefones na tabela do BD;
   - Número do WhatsApp agora adiciona **+55** no envio da mensagem pelo App Mobile
 
-##### - Melhorias na Aplicação: :medal_sports:
- **WEB**:
-  -Adicionado mascara no input  do Whatsapp;
-  -Adicionado Modal com timeout na finalização do cadastro do Ponto de Coleta;
-  -Adicionado mouse Pointed em diversas partes da interface;
+##### - Melhorias na Aplicação:  :medal_sports:
+**WEB**:
+
+    -Adicionado mascara no input  do Whatsapp;
+    -Adicionado Modal com timeout na finalização do cadastro do Ponto de Coleta;
+    -Adicionado mouse Pointed em diversas partes da interface;
 
 **Mobile**:
-  -Adicionado menu de seleção na Home do aplicativo;
-  -Integrado o menu de seleção com a api do **IBGE**;
-  -Adicionado restrições para só avançar para proxima tela após selecionar o Estado e a Cidade;
-  -Ajustados os Paddings dos icones para  o android
-  -Melhorias na interface de todo o aplicativo
+
+    -Adicionado menu de seleção na Home do aplicativo;
+    -Integrado o menu de seleção com a api do **IBGE**;
+    -Adicionado restrições para só avançar para proxima tela após selecionar o Estado e a Cidade;
+    -Ajustados os Paddings dos icones para  o android
+    -Melhorias na interface de todo o aplicativo
 
 ## 🎨 Layout
 
