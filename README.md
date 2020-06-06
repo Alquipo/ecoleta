@@ -24,13 +24,13 @@
 
 ## :information_source: O que é Next Level Week?
 
-O **NLW** é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível.
-Através do  método da [Rocketseat][rs], você aprenderá novas ferramentas, aprenderá sobre novas tecnologias e descobrirá hacks que irão impulsionar sua carreira.
+O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível. 
+Através do  método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
 Um evento online e totalmente gratuito que o ajudará a dar o próximo passo na sua evolução como desenvolvedor.
 
 ## 💻 Projeto
 
-♻️Ecoleta é um projeto desenvolvido com base na Semana Internacional do Meio Ambiente. O objetivo é conectar as pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha, etc. Projeto desenvolvido na trilha Booster da semana NLW.
+♻️Ecoleta é um projeto desenvolvido com base na Semana Internacional do Meio Ambiente. O objetivo é conectar as pessoas a empresas que coletam resíduos específicos, como lâmpadas, baterias, óleo de cozinha, etc. O Projeto foi desenvolvido seguindo a trilha Booster da Semana [NLW](https://nextlevelweek.com/inscricao/1).
 
 O projeto conta com aplicação Web para cadastro dos pontos de coleta e uma aplicação mobile para visualizar os pontos de coleta
 
@@ -43,20 +43,21 @@ O projeto conta com aplicação Web para cadastro dos pontos de coleta e uma apl
 Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando alguns bugs que havia ficado no projeto original
 
 ##### - Bugs Corrigidos: :bug:
-  - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um **.0** no final de todos os telefones ma tabela do BD;
+  - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um **.0** no final de todos os telefones na tabela do BD;
   - Número do WhatsApp agora adiciona **+55** no envio da mensagem pelo App Mobile
 
 ##### - Melhorias na Aplicação: :medal_sports:
- - **WEB**:
+ **WEB**:
   -Adicionado mascara no input  do Whatsapp;
   -Adicionado Modal com timeout na finalização do cadastro do Ponto de Coleta;
-  -Add mouse Pointed em diversas partes da interface;
+  -Adicionado mouse Pointed em diversas partes da interface;
 
-- **Mobile**:
+**Mobile**:
   -Adicionado menu de seleção na Home do aplicativo;
-  -Integrado o input-select com a api do **IBGE**;
+  -Integrado o menu de seleção com a api do **IBGE**;
   -Adicionado restrições para só avançar para proxima tela após selecionar o Estado e a Cidade;
   -Ajustados os Paddings dos icones para  o android
+  -Melhorias na interface de todo o aplicativo
 
 ## 🎨 Layout
 
@@ -91,10 +92,9 @@ Este projeto foi desenvolvido com as seguintes Ferramentas:
 - [VS Code][vs]
 
 
-
 ## 🚀 Como rodar este projeto
 
-Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [Node.js][nodejs] + [Npm][npm] Instalado em seu computador.
+Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [Node.js][nodejs] Instalado em seu computador.
 
 O projeto e divido em três partes:
 
@@ -104,7 +104,7 @@ O projeto e divido em três partes:
 
 💡 Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
 
-### Clonando o repositorio
+### :cyclone: Clonando o repositório
 
 ```bash
 # Clone este repositório
@@ -126,7 +126,7 @@ $ npm install
 # Acesse a pasta com a configuração do BD
 $ cd src/database 
 
-edita o arquivo 'connection.ts' ou cria um arquivo 'database.sqlite' na pasta database
+Edita o arquivo 'connection.ts' ou cria um arquivo 'database.sqlite' na pasta database
 
 # Execute as Migrates
 $ npm run knex:migrate
@@ -153,7 +153,7 @@ $ npm install
 # Execute a aplicação
 $ npm run start
 
- # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
 ### 📱Rodando a aplicação mobile 
@@ -182,7 +182,7 @@ $ expo start
 
 ## :memo: License
 
-Este projeto esta sobe a licença MIT. Veja a [LICENÇA](license) para saber mais.
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA][license] para saber mais.
 
 
 Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/alquiponeto/)
