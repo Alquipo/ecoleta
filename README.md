@@ -203,7 +203,7 @@ $ expo start
 
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
-## :memo: License
+## :memo: Licença
 
 Este projeto esta sobe a licença MIT. Veja a [LICENÇA][license] para saber mais.
 
