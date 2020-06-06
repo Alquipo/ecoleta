@@ -47,8 +47,8 @@ O projeto conta com aplicação Web para cadastro dos pontos de coleta e uma apl
 Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando alguns bugs que havia ficado no projeto original
 
 ##### - Bugs Corrigidos: :bug:
-  - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um **.0** no final de todos os telefones na tabela do BD;
-  - Número do WhatsApp agora adiciona **+55** no envio da mensagem pelo App Mobile
+    - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um **.0** no final de todos os telefones na tabela do BD;
+    - Número do WhatsApp agora adiciona **+55** no envio da mensagem pelo App Mobile
 
 ##### - Melhorias na Aplicação:  :medal_sports:
 **WEB**:
