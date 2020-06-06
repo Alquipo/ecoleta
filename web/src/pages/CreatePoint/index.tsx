@@ -212,7 +212,7 @@ const CreatePoint = () => {
 
 
             <form onSubmit={handleSubmit}>
-                <h1>Cadastro do <br /> ponto de coleta</h1>
+                <h1>Cadastro do ponto de coleta</h1>
 
                 <Modal show={showModal} />
 
@@ -230,7 +230,7 @@ const CreatePoint = () => {
 
                     <div className="field-group">
                         <div className="field">
-                            <label htmlFor="email">E-mails</label>
+                            <label htmlFor="email">E-mail</label>
                             <input type="email" name="email" id="email" onChange={handleInputChange} />
                         </div>
 
@@ -276,7 +276,7 @@ const CreatePoint = () => {
                         <div className="field">
                             <label htmlFor="uf">Estado (UF)</label>
                             <select name="uf" id="uf" value={selectedUf} onChange={handleSelectUf}>
-                                <option value="0">Seleciono uma UF</option>
+                                <option value="0">Selecione uma UF</option>
 
                                 {ufs.map(uf => (
                                     <option key={uf} value={uf}>{uf}</option>
@@ -289,7 +289,7 @@ const CreatePoint = () => {
                         <div className="field">
                             <label htmlFor="city">Cidade</label>
                             <select name="city" id="city" value={selectedCity} onChange={handleSelectCity}>
-                                <option value="0">Seleciona uma Cidade</option>
+                                <option value="0">Selecione uma Cidade</option>
                                 {cities.map(city => (
                                     <option key={city} value={city}>{city}</option>
 
