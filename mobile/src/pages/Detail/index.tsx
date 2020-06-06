@@ -21,12 +21,12 @@ interface Data {
     city: string,
     uf: string,
 
-
   },
   items: {
     title: string
   }[]
 }
+
 
 const Detail = () => {
   const [data, setData] = useState<Data>({} as Data)
@@ -49,7 +49,7 @@ const Detail = () => {
   }
 
   function handleWhatsapp() {
-    Linking.openURL(`whatsapp://send?phone=${data.point.whatsapp}&text= Tenho interesse sobre a coleta de resíduos`)
+    Linking.openURL(`whatsapp://send?phone=${'55' + data.point.whatsapp}&text= Tenho interesse sobre a coleta de resíduos`)
   }
 
   function handleComposemail() {

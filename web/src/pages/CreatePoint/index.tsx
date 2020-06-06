@@ -144,8 +144,6 @@ const CreatePoint = () => {
         whatsapp = whatsapp.replace('-', '')
         whatsapp = whatsapp.replace(')', '')
         whatsapp = whatsapp.replace('(', '')
-        whatsapp = '55' + whatsapp
-
 
         const uf = selectedUf
         const city = selectedCity

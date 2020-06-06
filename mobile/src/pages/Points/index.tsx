@@ -150,10 +150,12 @@ const Points = () => {
           )}
         </View>
 
+        <Text style={styles.description2}>Selecione os itens que deseja coletar.</Text>
+
       </View>
 
       <View style={styles.itemsContainer}>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 20 }}>
+        <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 10 }}>
 
           {items.map(item => (
             <TouchableOpacity
@@ -194,6 +196,14 @@ const styles = StyleSheet.create({
     color: '#6C6C80',
     fontSize: 16,
     marginTop: 4,
+    fontFamily: 'Roboto_400Regular',
+  },
+
+  description2: {
+    color: '#6C6C80',
+    fontSize: 16,
+    marginTop: 4,
+    textAlign: 'center',
     fontFamily: 'Roboto_400Regular',
   },
 
