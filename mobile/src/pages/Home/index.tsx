@@ -1,24 +1,76 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Feather as Icon } from '@expo/vector-icons'
-import { StyleSheet, ImageBackground, View, Image, Text, TextInput, KeyboardAvoidingView, Platform } from 'react-native'
+import { StyleSheet, ImageBackground, View, Image, Text, Alert, KeyboardAvoidingView, Platform } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 import { useNavigation } from '@react-navigation/native'
+import RNPickerSelect from 'react-native-picker-select';
 
+
+import ibge from '../../services/ibge';
+interface IBGEUFResponse {
+  sigla: string;
+}
+
+interface IBGECityResponse {
+  nome: string;
+}
+
+interface FormatPickerSelect {
+  label: string;
+  value: string;
+}
 
 const Home = () => {
 
-  const [uf, setUf] = useState('')
-  const [city, setCity] = useState('')
+  const [ufs, setUfs] = useState<FormatPickerSelect[]>([]);
+  const [cities, setCities] = useState<FormatPickerSelect[]>([]);
 
-
+  const [selectedUf, setSelectedUf] = useState('0');
+  const [selectedCity, setSelectedCity] = useState('0');
   const navigation = useNavigation();
 
+  useEffect(() => {
+    async function loadUfs() {
+      const response = await ibge.get<IBGEUFResponse[]>('localidades/estados');
+
+      const ufInitials = response.data.map(uf => {
+        return {
+          label: uf.sigla,
+          value: uf.sigla,
+        };
+      });
+
+      setUfs(ufInitials);
+    }
+    loadUfs();
+  }, []);
+
+  useEffect(() => {
+    async function loadCities() {
+      if (selectedUf === '0') return;
+
+      const response = await ibge.get<IBGECityResponse[]>(`localidades/estados/${selectedUf}/municipios`);
+
+      const cityNames = response.data.map(city => {
+        return {
+          label: city.nome,
+          value: city.nome,
+        };
+      });
+
+      setCities(cityNames);
+    }
+    loadCities();
+  }, [selectedUf]);
+
+
   function handleNavigateToPoints() {
-    navigation.navigate('Points', {
-      uf,
-      city,
-    })
+    if (selectedUf === '0' || selectedCity === '0')
+      Alert.alert('Ooops...', 'Precisamos que selecione o Estado (UF) e a Cidade.');
+    else
+      navigation.navigate('Points', { uf: selectedUf, city: selectedCity });
   }
+
 
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
@@ -32,24 +84,37 @@ const Home = () => {
           </View>
         </View>
 
-        <View style={styles.footer}>
-          <TextInput
-            style={styles.input}
-            placeholder='Digite a UF'
-            value={uf}
-            maxLength={2}
-            autoCapitalize="characters"
-            autoCorrect={false}
-            onChangeText={setUf}
-          />
-          <TextInput
-            style={styles.input}
-            placeholder='Digite a Cidade'
-            value={city}
-            autoCorrect={false}
-            onChangeText={setCity}
-          />
 
+        <View style={styles.footer}>
+
+          {ufs.length > 0 && (
+            <RNPickerSelect
+              placeholder={{
+                label: 'Selecione um Estado',
+                value: '0',
+              }}
+              style={pickerSelectStyles}
+              useNativeAndroidPickerStyle={false}
+              onValueChange={(value) => {
+                setSelectedUf(String(value));
+                setSelectedCity('0');
+              }}
+              items={ufs}
+            />
+          )}
+
+          {selectedUf !== '0' && (
+            <RNPickerSelect
+              placeholder={{
+                label: 'Selecione uma Cidade',
+                value: '0',
+              }}
+              style={pickerSelectStyles}
+              useNativeAndroidPickerStyle={false}
+              onValueChange={(value) => setSelectedCity(String(value))}
+              items={cities}
+            />
+          )}
 
 
           <RectButton style={styles.button} onPress={handleNavigateToPoints}>
@@ -68,6 +133,32 @@ const Home = () => {
     </KeyboardAvoidingView>
   )
 }
+
+const pickerSelectStyles = StyleSheet.create({
+  inputIOS: {
+    paddingVertical: 8,
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+    height: 60,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    marginBottom: 8,
+    paddingHorizontal: 24,
+    fontSize: 16, // to ensure the text is never behind the icon
+  },
+  inputAndroid: {
+
+    paddingVertical: 8,
+    color: 'black',
+    paddingRight: 30, // to ensure the text is never behind the icon
+    height: 60,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    marginBottom: 8,
+    paddingHorizontal: 24,
+    fontSize: 16,
+  },
+});
 
 const styles = StyleSheet.create({
   container: {
