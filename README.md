@@ -6,17 +6,17 @@
 	🚧 NextLevelWeek 1.0 🚀 In progress.. 🚧
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/NLW1.0-AppEcoleta">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/NLW-01-Ecoleta">
 
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/NLW1.0-AppEcoleta">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/NLW-01-Ecoleta">
 	
   <a href="https://www.linkedin.com/in/alquiponeto/">
     <img alt="Made by Alquipo" src="https://img.shields.io/badge/made%20by-AlquipoNeto-blue">
   </a>
 
-  <a href="https://github.com/Alquipo/NLW1.0-AppEcoleta/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/NLW1.0-AppEcoleta?color=blue">
+  <a href="https://github.com/Alquipo/NLW-01-Ecoleta/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/NLW-01-Ecoleta?color=blue">
   </a>
 
   
