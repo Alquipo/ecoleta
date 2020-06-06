@@ -14,6 +14,7 @@ import './styles.css'
 import logo from '../../assets/logo.svg'
 import Modal from '../Shared/Modal';
 
+
 interface Item {
     id: number,
     title: string,
@@ -33,11 +34,12 @@ interface IBGECityResponse {
 
 
 const CreatePoint = () => {
+
     //estados do react
     const [items, setItems] = useState<Item[]>([])
     const [ufs, setUfs] = useState<string[]>([])
     const [cities, setCities] = useState<string[]>([])
-    const [counter, setCounter] = useState(0); //resolver o bug de requisitar api infinito
+
 
     const [initialPosition, setInitialPosition] = useState<[number, number]>([0, 0])
     const [showModal, setShowModal] = useState<boolean>(false);
@@ -79,7 +81,7 @@ const CreatePoint = () => {
 
             setUfs(ufInitials)
         })
-    }, [counter])
+    }, [])
 
     useEffect(() => {
         //carregar as cidade quando a uf mudar
@@ -126,12 +128,9 @@ const CreatePoint = () => {
 
         if (alreadySelected >= 0) {
             const filteredItems = selectedItems.filter(item => item !== id)
-
             setSelectedItems(filteredItems)
-
         } else {
             setSelectedItems([...selectedItems, id])
-
         }
     }
 
@@ -145,6 +144,8 @@ const CreatePoint = () => {
         whatsapp = whatsapp.replace('-', '')
         whatsapp = whatsapp.replace(')', '')
         whatsapp = whatsapp.replace('(', '')
+        whatsapp = '55' + whatsapp
+
 
         const uf = selectedUf
         const city = selectedCity
@@ -168,22 +169,8 @@ const CreatePoint = () => {
 
         }
 
-        // const data = {
-        //     name,
-        //     email,
-        //     whatsapp,
-        //     uf,
-        //     city,
-        //     latitude,
-        //     longitude,
-        //     items
-        // }
-
         await api.post('points', data)
 
-        //alert('ponto de coleta criado')
-
-        //history.push('/')
         setShowModal(true);
 
         setTimeout(function () {
@@ -191,6 +178,7 @@ const CreatePoint = () => {
             history.push('/');
         }, 4000);
     }
+
 
 
     return (
@@ -209,8 +197,6 @@ const CreatePoint = () => {
             </header>
 
 
-
-
             <form onSubmit={handleSubmit}>
                 <h1>Cadastro do ponto de coleta</h1>
 
@@ -225,13 +211,13 @@ const CreatePoint = () => {
 
                     <div className="field">
                         <label htmlFor="name">Nome da entidade</label>
-                        <input type="text" name="name" id="name" onChange={handleInputChange} />
+                        <input type="text" name="name" id="name" onChange={handleInputChange} required />
                     </div>
 
                     <div className="field-group">
                         <div className="field">
                             <label htmlFor="email">E-mail</label>
-                            <input type="email" name="email" id="email" onChange={handleInputChange} />
+                            <input type="email" name="email" id="email" onChange={handleInputChange} required />
                         </div>
 
                         <div className="field">
@@ -247,7 +233,7 @@ const CreatePoint = () => {
                                 id="whatsapp"
                                 onBlur={() => { }}
                                 onChange={handleInputChange}
-
+                                required
                             />
                         </div>
 
@@ -275,7 +261,7 @@ const CreatePoint = () => {
                     <div className="field-group">
                         <div className="field">
                             <label htmlFor="uf">Estado (UF)</label>
-                            <select name="uf" id="uf" value={selectedUf} onChange={handleSelectUf}>
+                            <select name="uf" id="uf" value={selectedUf} onChange={handleSelectUf} >
                                 <option value="0">Selecione uma UF</option>
 
                                 {ufs.map(uf => (
@@ -288,7 +274,7 @@ const CreatePoint = () => {
 
                         <div className="field">
                             <label htmlFor="city">Cidade</label>
-                            <select name="city" id="city" value={selectedCity} onChange={handleSelectCity}>
+                            <select name="city" id="city" value={selectedCity} onChange={handleSelectCity} >
                                 <option value="0">Selecione uma Cidade</option>
                                 {cities.map(city => (
                                     <option key={city} value={city}>{city}</option>
@@ -309,6 +295,7 @@ const CreatePoint = () => {
                         {items.map(item => (
                             <li
                                 key={item.id}
+
                                 onClick={() => handleSelecteItem(item.id)}
                                 className={selectedItems.includes(item.id) ? 'selected' : ''}
                             >
