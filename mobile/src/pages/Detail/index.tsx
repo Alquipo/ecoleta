@@ -119,17 +119,17 @@ const styles = StyleSheet.create({
 
   pointName: {
     color: '#322153',
-    fontSize: 28,
+    fontSize: 35,
     fontFamily: 'Ubuntu_700Bold',
     marginTop: 24,
   },
 
   pointItems: {
-    fontFamily: 'Roboto_400Regular',
-    fontSize: 16,
+    fontFamily: 'Ubuntu_700Bold',
+    fontSize: 20,
     lineHeight: 24,
     marginTop: 8,
-    color: '#6C6C80'
+    color: '#34CB79'
   },
 
   address: {
@@ -138,14 +138,14 @@ const styles = StyleSheet.create({
 
   addressTitle: {
     color: '#322153',
-    fontFamily: 'Roboto_500Medium',
-    fontSize: 16,
+    fontFamily: 'Ubuntu_700Bold',
+    fontSize: 20,
   },
 
   addressContent: {
-    fontFamily: 'Roboto_400Regular',
+    fontFamily: 'Ubuntu_700Bold',
     lineHeight: 24,
-    marginTop: 8,
+    marginTop: 10,
     color: '#6C6C80'
   },
 

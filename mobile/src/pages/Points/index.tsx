@@ -245,7 +245,7 @@ const styles = StyleSheet.create({
     flex: 1,
     fontFamily: 'Roboto_400Regular',
     color: '#FFF',
-    fontSize: 13,
+    fontSize: 11,
     lineHeight: 23,
   },
 
