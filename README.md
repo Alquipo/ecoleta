@@ -19,6 +19,10 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Alquipo/NLW-01-Ecoleta?color=blue">
   </a>
 <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen?color=blue">
+
+<a href="https://github.com/leon-carvalho/Ecoleta/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Alquipo/NLW-01-Ecoleta?style=social">
+  </a>
   
 </p>
 
