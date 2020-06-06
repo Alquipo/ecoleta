@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { FiLogIn } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
 
@@ -8,6 +8,9 @@ import logo from '../../assets/logo.svg'
 
 
 const Home = () => {
+
+
+
     return (
         <div id="page-home">
             <div className="content">
@@ -15,6 +18,8 @@ const Home = () => {
                     <Link to="/">
                         <img src={logo} alt="Ecoleta" />
                     </Link>
+
+
                 </header>
 
                 <main>
@@ -33,5 +38,7 @@ const Home = () => {
         </div>
     )
 }
+
+
 
 export default Home

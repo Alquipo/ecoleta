@@ -65,12 +65,16 @@
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
+
+
 }
 
 #page-home .content main a span svg {
   color: #FFF;
   width: 20px;
   height: 20px;
+
+
 }
 
 #page-home .content main a strong {
@@ -81,6 +85,7 @@
 
 #page-home .content main a:hover {
   background: #2FB86E;
+
 }
 
 @media(max-width: 900px) {
