@@ -63,8 +63,7 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
 ### Mobile
 
 <h4 align="center">
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-home1.jpg" width="200px" />
-  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-home-selected.jpg" width="200px" />
+  <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-full.gif" width="194px" />
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-home-full.jpg" width="200px" />
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-point.jpg" width="200px" />
   <img alt="ExampleMobile" title="ExampleMobile" src=".github/app-detail.jpg" width="200px" />
@@ -72,14 +71,17 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
 
 ### Web
 <h4 align="center">
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="500px" />
+</h4>
+<h4 align="center">
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-home.png" width="400px" />
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="400px" />
-  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-modal.png" width="400px" />
+  
+  <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-modal.png" width="442px" />
 </h4>
 
 ## :hammer: Tecnologias
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
+Este projeto foi desenvolvido com as seguintes Ferramentas:
 
 - [Node.js][nodejs]
 - [TypeScript][typescript]
@@ -90,70 +92,107 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 
 
-
-## :information_source: How To Use
+## 🚀 Como rodar este projeto
 
 Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [Node.js][nodejs] + [Npm][npm] Instalado em seu computador.
 
-### Install API 
+O projeto e divido em três partes:
+
+1. Back End (pasta server) 
+2. Front End (pasta web)
+3. Mobile (pasta mobile)
+
+💡 Tanto o Front End quanto o Mobile precisam que o Back End esteja sendo executado para funcionar.
+
+### Clonando o repositorio
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/Alquipo/NLW1.0-AppEcoleta.git
+# Clone este repositório
+$ git clone https://github.com/Alquipo/NLW-01-Ecoleta.git
 
-# Go into the repository
-$ cd NLW1.0-AppEcoleta/server
-
-# Install dependencies
-$ npm install
-
-# Run Migrates
-$ npm run knex:migrate
-
-# Run Seeds
-$ npm run knex:seed
-
-# Start server
-$ npm run dev
-
-running on port 3333
+# Acesse a pasta do projeto no terminal/cmd
+$ cd NLW-01-Ecoleta
 ```
 
-## 🤔 How to contribute
+### 🎲 Rodando o Back End (servidor)
 
-- Make a fork;
-- Create a branck with your feature: `git checkout -b my-feature`;
-- Commit changes: `git commit -m 'feat: My new feature'`;
-- Make a push to your branch: `git push origin my-feature`.
+```bash
+# Acesse a pasta do projeto do servidor
+$ cd server
 
-After merging your receipt request to done, you can delete a branch from yours.
+# Instale as dependências
+$ npm install
+
+# Acesse a pasta com a configuração do BD
+$ cd src/database 
+
+edita o arquivo 'connection.ts' ou cria um arquivo 'database.sqlite' na pasta database
+
+# Execute as Migrates
+$ npm run knex:migrate
+
+# Execute as Seeds
+$ npm run knex:seed
+
+# Execute a Aplicação
+$ npm run dev
+
+# O servidor inciará na porta:3333 - acesse http://localhost:3333 
+
+```
+### 🧭 Rodando a aplicação web (Front End)
+
+```bash
+
+# Vá para a pasta da aplicação Front End
+$ cd web
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ npm run start
+
+ # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+```
+
+### 📱Rodando a aplicação mobile 
+```bash
+# Vá para a pasta da aplicação Front End
+$ cd mobile
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ expo start
+
+# A aplicação será aberta na porta:19002 - acesse http://localhost:19002
+
+# Use o App expo baixado no seu celular para scan o QRCode
+```
+## 🤔 Como contribuir para o projeto
+
+- Faça um **fork** do projeto;
+- Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+- Salve as alterações e crie uma mensagem de commit contando o que você fez:` git commit -m "feature: My new feature"`
+- Envie as suas alterações: `git push origin my-feature`
+
+> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
 
 ## :memo: License
 
-This project is under the MIT license. See the [LICENSE](https://github.com/Alquipo/NLW1.0-AppEcoleta/blob/master/LICENSE) for details.
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA](license) para saber mais.
 
 
-Made with ♥ by Alquipo Neto :wave: [Get in touch!](https://www.linkedin.com/in/alquiponeto/)
+Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/alquiponeto/)
 
 [nodejs]: https://nodejs.org/
-[npm]: https://www.npmjs.com/
 [typescript]: https://www.typescriptlang.org/
 [expo]: https://expo.io/
 [reactjs]: https://reactjs.org
 [rn]: https://facebook.github.io/react-native/
 [vs]: https://code.visualstudio.com/
-[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
-[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-[prettier]: https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
 [rs]: https://rocketseat.com.br
+[license]: https://opensource.org/licenses/MIT
 
-
-
-
-<h3 align="center"> 
-	🚧 Preview  🚧
-</h3>
-
-<h3 align="center">
-    <img alt="Example" title="Preview" src=".github/preview.gif" width="550px"/>
-</h3>
