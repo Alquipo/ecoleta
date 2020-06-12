@@ -82,7 +82,7 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
     -Ajustados os Paddings dos icones para  o android
     -Melhorias na interface de todo o aplicativo
 
-## 🎨 Layout
+## 🎨  Layout
 
 ### Mobile
 
