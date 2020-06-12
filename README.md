@@ -43,7 +43,7 @@
   </a>
   </p>
 
-## :information_source: O que é Next Level Week?
+## :information_source:  O que é Next Level Week?
 
 O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível. 
 Através do  método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
