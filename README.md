@@ -9,7 +9,6 @@
 
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Alquipo/NLW-01-Ecoleta">
 
-
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/Alquipo/NLW-01-Ecoleta">
 	
   <a href="https://www.linkedin.com/in/alquiponeto/">
@@ -25,8 +24,6 @@
   <a href="https://github.com/ALquipo/NLW-01-Ecoleta/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/Alquipo/NLW-01-Ecoleta?style=social">
   </a>
-  
-
   
 </p>
 <p align="center">
@@ -45,8 +42,8 @@
 
 ## :information_source: O que é Next Level Week?
 
-O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível. 
-Através do  método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
+O [NLW](https://nextlevelweek.com/inscricao/1) é uma semana prática com muito código, desafios, network e com um único objetivo: levá-lo ao próximo nível.
+Através do método da [Rocketseat][rs], você aprenderá novas ferramentas, tecnologias e descobrirá hacks que irão impulsionar sua carreira.
 Um evento online e totalmente gratuito que o ajudará a dar o próximo passo na sua evolução como desenvolvedor.
 
 ## 💻 Projeto
@@ -64,10 +61,12 @@ O projeto conta com aplicação Web para cadastro dos pontos de coleta e uma apl
 Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando alguns bugs que havia ficado no projeto original
 
 ##### - Bugs Corrigidos: :bug:
+
     - Ajuste no envio dos números de WhatsApp da aplicação Web, estava adicionando um .0 no final de todos os telefones na tabela do BD;
     - Número do WhatsApp agora adiciona +55 no envio da mensagem pelo App Mobile
 
-##### - Melhorias na Aplicação:  :medal_sports:
+##### - Melhorias na Aplicação: :medal_sports:
+
 **WEB**:
 
     -Adicionado mascara no input  do Whatsapp;
@@ -94,6 +93,7 @@ Com aprendizado da **NLW** acabei realizando melhorias no projeto e consertando 
 </h4>
 
 ### Web
+
 <h4 align="center">
   <img alt="ExampleWeb" title="ExampleWeb" src=".github/web-point.gif" width="500px" />
 </h4>
@@ -114,14 +114,13 @@ Este projeto foi desenvolvido com as seguintes Ferramentas:
 - [Expo][expo]
 - [VS Code][vs]
 
-
 ## 🚀 Como rodar este projeto
 
 Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [Node.js][nodejs] Instalado em seu computador.
 
 O projeto e divido em três partes:
 
-1. Back End (pasta server) 
+1. Back End (pasta server)
 2. Front End (pasta web)
 3. Mobile (pasta mobile)
 
@@ -147,7 +146,7 @@ $ cd server
 $ npm install
 
 # Acesse a pasta com a configuração do BD
-$ cd src/database 
+$ cd src/database
 
 Edita o arquivo 'connection.ts' ou cria um arquivo 'database.sqlite' na pasta database
 
@@ -160,9 +159,10 @@ $ npm run knex:seed
 # Execute a Aplicação
 $ npm run dev
 
-# O servidor inciará na porta:3333 - acesse http://localhost:3333 
+# O servidor inciará na porta:3333 - acesse http://localhost:3333
 
 ```
+
 ### 🧭 Rodando a aplicação web (Front End)
 
 ```bash
@@ -179,7 +179,8 @@ $ npm run start
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
-### 📱Rodando a aplicação mobile 
+### 📱Rodando a aplicação mobile
+
 ```bash
 # Vá para a pasta da aplicação Front End
 $ cd mobile
@@ -194,11 +195,12 @@ $ expo start
 
 # Use o App expo baixado no seu celular para scan o QRCode
 ```
+
 ## 🤔 Como contribuir para o projeto
 
 - Faça um **fork** do projeto;
 - Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-- Salve as alterações e crie uma mensagem de commit contando o que você fez:` git commit -m "feature: My new feature"`
+- Salve as alterações e crie uma mensagem de commit contando o que você fez:`git commit -m "feature: My new feature"`
 - Envie as suas alterações: `git push origin my-feature`
 
 > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
@@ -206,7 +208,6 @@ $ expo start
 ## :memo: Licença
 
 Este projeto esta sobe a licença MIT. Veja a [LICENÇA][license] para saber mais.
-
 
 Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/alquiponeto/)
 
@@ -218,4 +219,3 @@ Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linke
 [vs]: https://code.visualstudio.com/
 [rs]: https://rocketseat.com.br
 [license]: https://opensource.org/licenses/MIT
-
